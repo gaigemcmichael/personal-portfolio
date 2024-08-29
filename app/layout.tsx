@@ -18,8 +18,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <NavBar />
-        <main>{children}</main>
+        <NavBar/>
+        <main className="p-4 md:p-12">{children}</main>
       </body>
     </html>
   );
