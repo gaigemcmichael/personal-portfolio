@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: "class", // Enables dark mode using the 'class' strategy
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,18 +9,35 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
+
       colors: {
-        customBlue: {
-          default: "#0077B5",
-        },
+
+        "gray-background": "d6dbdc",
+        // Light Mode Colors
+        "blue-primary": "#2563eb",
+        "blue-secondary": "#1d4ed8",
+        "white-primary": "#e5e7eb",
+        "gray-light": "#f3f4f6", // Soft light gray for backgrounds
+        "red-light": "#f87171", // Light red for alerts
+        "green-light": "#34d399", // Light green for success
+        "yellow-light": "#fde047", // Vibrant yellow for warnings
+        "orange-light": "#fb923c", // Bright orange for accenting
+        "purple-light": "#a78bfa", // Soft lavender purple for subtle highlights
+
+        // Dark Mode Colors
+        "blue-primary-dark": "#1e40af", // Darker blue for primary
+        "blue-secondary-dark": "#1c3aa9", // Muted secondary blue
+        "white-primary-dark": "#374151", // Soft grayish white for text in dark mode
+        "gray-dark": "#111827", // Very dark gray for backgrounds
+        "red-dark": "#dc2626", // Vibrant red for alerts
+        "green-dark": "#16a34a", // Rich green for success
+        "yellow-dark": "#d97706", // Muted yellow for warnings
+        "orange-dark": "#ea580c", // Burnt orange for accenting
+        "purple-dark": "#7c3aed", // Deep violet for highlights
       },
     },
   },
   plugins: [],
 };
+
 export default config;
