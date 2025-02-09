@@ -3,7 +3,7 @@ import Experience from './components/experience';
 
 export default function Home() {
   return (
-    <main className="flex flex-col gap-16 min-h-screen max-w-[1920px] items-center px-10 lg:px-24 dark:bg-gray-800">
+    <main className="flex flex-col gap-16 min-h-screen max-w-[1920px] items-center px-1 sm:px-10 lg:px-24 dark:bg-gray-800">
       <About/>
       <Experience/>
     </main>
