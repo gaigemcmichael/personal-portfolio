@@ -26,11 +26,35 @@ const Navbar = () => {
     };
   }, [isOpen]);
 
+  const navLinks = [
+    {
+      src: "/home.svg",
+      alt: "Home button",
+      imageClasses: "cursor-pointer hover:opacity-80",
+      buttonName: "Home",
+    },
+    {
+      src: "/profile.svg",
+      alt: "About button",
+      imageClasses: "cursor-pointer hover:opacity-80",
+      buttonName: "About",
+    },
+    {
+      src: "/email.svg",
+      alt: "Contact button",
+      imageClasses: "cursor-pointer hover:opacity-80",
+      buttonName: "Contact",
+    },
+  ];
+
   return (
     <header
       ref={navRef} // Wrap the navbar in a ref
-      className="bg-blue-primary text-white-primary dark:bg-black-secondary p-2 md:px-4 m-2 md:my-4 md:mx-6 rounded-lg shadow-lg"
+      className="sticky top-2 md:top-4 bg-blue-primary text-white-primary dark:bg-black-secondary p-2 md:px-4 mx-2 md:mx-6 rounded-lg shadow-lg"
     >
+
+
+
       <div className="container mx-auto flex justify-between items-center">
         <h1 className="text-xl font-bold">
           <Link href="/">Gaige McMichael</Link>
@@ -38,28 +62,25 @@ const Navbar = () => {
         <div className="flex items-center gap-4">
           {/* Desktop Links */}
           <nav className="hidden md:block">
-            <ul className="flex space-x-4">
-              <li>
-                <Link 
-                  href="/" 
-                  className="flex gap-1 hover:text-gray-200"
-                >
-                  <Image
-                    src="/home.svg"
-                    alt="Home button"
-                    className="cursor-pointer hover:opacity-80"
-                    width={20}
-                    height={20}
-                  />
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="hover:text-gray-200">About</Link>
-              </li>
-              <li>
-                <Link href="/contact" className="hover:text-gray-200">Contact</Link>
-              </li>
+            <ul className="flex items-center space-x-4">
+                {navLinks.map((link, index) => (
+                  <li key={index}>
+                    <Link
+                      key={index}
+                      href="/"
+                      className="flex gap-1 hover:text-gray-200"
+                    >
+                      <Image
+                        src={link.src}
+                        alt={link.alt}
+                        className="cursor-pointer hover:opacity-80"
+                        width={20}
+                        height={20}
+                      />
+                      {link.buttonName}
+                    </Link>
+                  </li>
+              ))}
             </ul>
           </nav>
         </div>
@@ -93,39 +114,31 @@ const Navbar = () => {
       {/* Mobile Navigation Links */}
       {isOpen && (
         <div
-          className="md:hidden absolute left-1/2 -translate-x-1/2 top-[70px] w-[90%] sm:w-[95%] 
+          className="md:hidden absolute left-1/2 -translate-x-1/2 top-[60px] w-[90%] sm:w-[95%] 
           bg-black-primary bg-opacity-90 p-4 rounded-b-lg transition-all duration-300 
           opacity-100 scale-100"
         >
           <nav>
             <ul className="flex flex-col gap-y-4 text-right">
-              <li>
-                <Link
-                  href="/"
-                  className="block py-2 px-4 text-white-primary hover:bg-gray-light rounded transition-all"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/about"
-                  className="block py-2 px-4 text-white-primary hover:bg-gray-light rounded transition-all"
-                  onClick={() => setIsOpen(false)}
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className="block py-2 px-4 text-white-primary hover:bg-gray-light rounded transition-all"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Contact
-                </Link>
-              </li>
+              {navLinks.map((link, index) => (
+                <li key="index" className="text-right">
+                  <Link
+                    key={index}
+                    href="/"
+                    className="flex gap-2 justify-end py-2 px-4 text-white-primary hover:bg-gray-light rounded transition-all"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    <Image
+                      src={link.src}
+                      alt={link.alt}
+                      className="cursor-pointer hover:opacity-80"
+                      width={20}
+                      height={20}
+                    />
+                    {link.buttonName}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </nav>
         </div>
