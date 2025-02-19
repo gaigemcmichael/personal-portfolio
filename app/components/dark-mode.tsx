@@ -15,7 +15,7 @@ export default function DarkMode(): JSX.Element {
   return (
     <button
       onClick={() => setIsDarkMode(!isDarkMode)}
-      className="p-2 bg-transparent rounded text-black dark:text-white"
+      className="p-2 bg-transparent rounded text-black dark:text-white-primary"
     >
       <Image
         src="/dark-mode.svg"

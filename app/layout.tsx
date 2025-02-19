@@ -17,9 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="dark:bg-gray-800">
+      <body className="dark:bg-black-primary">
         <NavBar/>
-        <main className="px-2 md:px-8 dark:bg-gray-800">{children}</main>
+        <main className="px-2 md:px-8 dark:bg-black-primary">{children}</main>
       </body>
     </html>
   );

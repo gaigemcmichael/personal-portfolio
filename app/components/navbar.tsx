@@ -29,7 +29,7 @@ const Navbar = () => {
   return (
     <header
       ref={navRef} // Wrap the navbar in a ref
-      className="bg-blue-primary text-white dark:bg-gray-700 p-2 md:px-4 m-2 md:my-4 md:mx-6 rounded-lg shadow-lg"
+      className="bg-blue-primary text-white-primary dark:bg-black-secondary p-2 md:px-4 m-2 md:my-4 md:mx-6 rounded-lg shadow-lg"
     >
       <div className="container mx-auto flex justify-between items-center">
         <h1 className="text-xl font-bold">
@@ -94,7 +94,7 @@ const Navbar = () => {
       {isOpen && (
         <div
           className="md:hidden absolute left-1/2 -translate-x-1/2 top-[70px] w-[90%] sm:w-[95%] 
-          bg-gray-800 bg-opacity-90 p-4 rounded-b-lg transition-all duration-300 
+          bg-black-primary bg-opacity-90 p-4 rounded-b-lg transition-all duration-300 
           opacity-100 scale-100"
         >
           <nav>
@@ -102,7 +102,7 @@ const Navbar = () => {
               <li>
                 <Link
                   href="/"
-                  className="block py-2 px-4 text-white hover:bg-gray-600 rounded transition-all"
+                  className="block py-2 px-4 text-white-primary hover:bg-gray-light rounded transition-all"
                   onClick={() => setIsOpen(false)}
                 >
                   Home
@@ -111,7 +111,7 @@ const Navbar = () => {
               <li>
                 <Link
                   href="/about"
-                  className="block py-2 px-4 text-white hover:bg-gray-600 rounded transition-all"
+                  className="block py-2 px-4 text-white-primary hover:bg-gray-light rounded transition-all"
                   onClick={() => setIsOpen(false)}
                 >
                   About
@@ -120,7 +120,7 @@ const Navbar = () => {
               <li>
                 <Link
                   href="/contact"
-                  className="block py-2 px-4 text-white hover:bg-gray-600 rounded transition-all"
+                  className="block py-2 px-4 text-white-primary hover:bg-gray-light rounded transition-all"
                   onClick={() => setIsOpen(false)}
                 >
                   Contact

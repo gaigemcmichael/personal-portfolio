@@ -18,7 +18,7 @@ export default function About() {
   ];
 
   return (
-    <div className="flex flex-col-reverse md:flex-row justify-between gap-5 items-center text-center md:text-left bg-gray-light dark:bg-gray-700 text-black dark:text-white-primary p-6 rounded-lg shadow-lg">
+    <div className="flex flex-col-reverse md:flex-row justify-between gap-5 items-center text-center md:text-left bg-gray-secondary dark:bg-black-secondary text-black dark:text-white-primary p-6 rounded-lg shadow-lg">
       <div className="flex flex-col gap-4">
         <h2 className="text-3xl md:text-5xl font-bold">
           Gaige McMichael

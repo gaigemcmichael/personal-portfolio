@@ -11,13 +11,13 @@ const config: Config = {
     extend: {
 
       colors: {
-
-        "gray-background": "d6dbdc",
         // Light Mode Colors
         "blue-primary": "#2563eb",
         "blue-secondary": "#1d4ed8",
-        "white-primary": "#e5e7eb",
-        "gray-light": "#f3f4f6", // Soft light gray for backgrounds
+        "white-primary": "#e5e7eb", // text
+        "gray-primary": "#d6dbdc", // light background
+        "gray-secondary": "#f3f4f6", // light background for section background
+        "gray-light": "#4b5563", 
         "red-light": "#f87171", // Light red for alerts
         "green-light": "#34d399", // Light green for success
         "yellow-light": "#fde047", // Vibrant yellow for warnings
@@ -25,6 +25,8 @@ const config: Config = {
         "purple-light": "#a78bfa", // Soft lavender purple for subtle highlights
 
         // Dark Mode Colors
+        "black-primary": "#1f2937", //dark background
+        "black-secondary": "#374151", //dark sections background
         "blue-primary-dark": "#1e40af", // Darker blue for primary
         "blue-secondary-dark": "#1c3aa9", // Muted secondary blue
         "white-primary-dark": "#374151", // Soft grayish white for text in dark mode
