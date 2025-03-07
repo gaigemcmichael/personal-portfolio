@@ -7,11 +7,13 @@ export default function About() {
       href: "https://github.com/gaigemcmichael/",
       src: "/github.svg",
       alt: "GitHub button",
+      classes: "dark:invert cursor-pointer hover:opacity-80",
     },
     {
       href: "https://www.linkedin.com/in/gaigemcmichael/",
       src: "/linkedin.svg",
       alt: "LinkedIn button",
+      classes: "bg-white-primary rounded-md cursor-pointer hover:opacity-80",
     },
   ];
 
@@ -35,7 +37,7 @@ export default function About() {
               <Image
                 src={link.src}
                 alt={link.alt}
-                className="cursor-pointer hover:opacity-80"
+                className={link.classes}
                 width={25}
                 height={20}
               />

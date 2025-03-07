@@ -68,7 +68,7 @@ const Navbar = () => {
                     <Link
                       key={index}
                       href="/"
-                      className="flex gap-1 hover:text-gray-200"
+                      className="relative flex gap-1 hover:opacity-80 transition-all duration-300 group"
                     >
                       <Image
                         src={link.src}
@@ -77,7 +77,11 @@ const Navbar = () => {
                         width={20}
                         height={20}
                       />
-                      {link.buttonName}
+                      <span className="relative">
+                        {link.buttonName}
+                        <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white-primary transition-all duration-300 group-hover:w-full"></span>
+                      </span>
+                      <div className="relative bottom-0 h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
                     </Link>
                   </li>
               ))}
@@ -114,9 +118,7 @@ const Navbar = () => {
       {/* Mobile Navigation Links */}
       {isOpen && (
         <div
-          className="md:hidden absolute left-1/2 -translate-x-1/2 top-[60px] w-[90%] sm:w-[95%] 
-          bg-black-primary bg-opacity-90 p-4 rounded-b-lg transition-all duration-300 
-          opacity-100 scale-100"
+          className="md:hidden absolute left-1/2 -translate-x-1/2 top-[60px] w-[90%] sm:w-[95%] bg-black-primary bg-opacity-90 p-4 rounded-b-lg transition-all duration-300 opacity-100 scale-100"
         >
           <nav>
             <ul className="flex flex-col gap-y-4 text-right">

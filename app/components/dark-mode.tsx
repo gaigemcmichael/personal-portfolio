@@ -15,14 +15,34 @@ export default function DarkMode(): JSX.Element {
   return (
     <button
       onClick={() => setIsDarkMode(!isDarkMode)}
-      className="p-2 bg-transparent rounded text-black dark:text-white-primary"
+      className="relative p-2 bg-transparent rounded transition-all duration-500"
     >
-      <Image
-        src="/dark-mode.svg"
-        alt="dark mode toggle"
-        width={30}
-        height={30}
-      />
+      <div
+        className={`relative w-[30px] h-[30px] transition-transform duration-500 ${
+          isDarkMode ? "rotate-180" : "rotate-0"
+        }`}
+      >
+        {/* Moon Icon */}
+        <Image
+          src="/moon.svg"
+          alt="moon icon"
+          width={30}
+          height={30}
+          className={`absolute inset-0 transition-opacity duration-500 ${
+            isDarkMode ? "opacity-0" : "opacity-100"
+          }`}
+        />
+        {/* Sun Icon */}
+        <Image
+          src="/sun.svg"
+          alt="sun icon"
+          width={30}
+          height={30}
+          className={`absolute inset-0 transition-opacity duration-500 ${
+            isDarkMode ? "opacity-100" : "opacity-0"
+          }`}
+        />
+      </div>
     </button>
   );
 }
