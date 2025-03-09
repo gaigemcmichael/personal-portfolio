@@ -93,7 +93,7 @@ const Navbar = () => {
           <DarkMode />
 
           {/* Mobile Menu Toggle */}
-          <div className="md:hidden">
+          <div className="md:hidden hover:opacity-80">
             <button
               onClick={(event) => {
                 event.stopPropagation(); // Prevent event from reaching document

@@ -15,10 +15,10 @@ export default function DarkMode(): JSX.Element {
   return (
     <button
       onClick={() => setIsDarkMode(!isDarkMode)}
-      className="relative p-2 bg-transparent rounded transition-all duration-500"
+      className="relative p-2 bg-transparent rounded transition-all duration-500 lg:ml-10"
     >
       <div
-        className={`relative w-[30px] h-[30px] transition-transform duration-500 ${
+        className={`relative w-[30px] h-[30px] transition-transform duration-500 hover:opacity-80 ${
           isDarkMode ? "rotate-180" : "rotate-0"
         }`}
       >
@@ -38,7 +38,7 @@ export default function DarkMode(): JSX.Element {
           alt="sun icon"
           width={30}
           height={30}
-          className={`absolute inset-0 transition-opacity duration-500 ${
+          className={`absolute inset-0 transition-opacity duration-500 text-white-primary hover:text-yellow-light ${
             isDarkMode ? "opacity-100" : "opacity-0"
           }`}
         />
