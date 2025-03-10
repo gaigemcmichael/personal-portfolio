@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="dark:bg-black-primary">
         <NavBar/>
-        <main className="px-2 md:px-8 mt-5 md:mt-8 dark:bg-black-primary">{children}</main>
+        <main className="px-2 md:px-8 mt-5 md:mt-8 pb-8 dark:bg-black-primary">{children}</main>
       </body>
     </html>
   );
