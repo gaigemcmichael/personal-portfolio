@@ -11,6 +11,7 @@ export default function Experience() {
       descriptionPoints: [
         "I am excited to be part of the LCS team this summer as a C# development intern.",
       ],
+      link: "https://www.lcs.com/",
       classes: "sm:ml-10",
     },
     {
@@ -24,6 +25,7 @@ export default function Experience() {
         "Collaborated with back-end and design teams to improve UX.",
         "Engaged in agile practices including standups, sprint planning, and code reviews.",
       ],
+      link: "https://ruoff.com/",
       classes: "",
     },
     {
@@ -37,6 +39,7 @@ export default function Experience() {
         "Earned company revenue through Dell's recycling program.",
         "Provided team process improvements for IT onboarding/offboarding.",
       ],
+      link: "https://ruoff.com/",
       classes: "",
     },
     {
@@ -49,6 +52,7 @@ export default function Experience() {
         "Completed indoor and outdoor construction projects.",
         "Gained experience in various construction tasks including roofing and siding.",
       ],
+      link: "https://www.facebook.com/people/Jeremy-Hughes/100010524602096/?_rdr",
       classes: "sm:mr-10",
     },
   ];

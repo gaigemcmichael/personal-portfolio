@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from "next/link";
 
 export default function ExperienceCard({
 		title,
@@ -7,6 +8,7 @@ export default function ExperienceCard({
 		descriptionPoints,
 		imageUrl,
 		imageAlt,
+		link,
 		classes,
 	}: {
 		title: string;
@@ -15,6 +17,7 @@ export default function ExperienceCard({
 		descriptionPoints: string[];
 		imageUrl: string;
 		imageAlt: string;
+		link: string;
 		classes: string,
 	}) {
 		return (
@@ -23,12 +26,19 @@ export default function ExperienceCard({
 					<h2 className="text-xl font-bold">{company}</h2>
 					<h3 className="text-gray-light dark:text-white-primary">{title}</h3>						
 					<div className="flex justify-center items-center my-2">
-						<Image
-								src={imageUrl}
-								alt={imageAlt}
-								width="250"
-								height="200"
-						/>
+						<Link
+							href={link}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="min-w-[250px]"
+						>
+							<Image
+									src={imageUrl}
+									alt={imageAlt}
+									width="250"
+									height="200"
+							/>
+						</Link>
 					</div>
 					<p className="text-gray-light dark:text-white-primary">{date}</p>						
 					<ul className="list-disc list-inside text-left mt-2">
