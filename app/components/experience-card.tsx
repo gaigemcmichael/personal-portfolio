@@ -23,12 +23,12 @@ export default function ExperienceCard({
 					<h2 className="text-xl font-bold">{company}</h2>
 					<h3 className="text-gray-light dark:text-white-primary">{title}</h3>						
 					<div className="flex justify-center items-center my-2">
-							<Image
-									src={imageUrl}
-									alt={imageAlt}
-									width="250"
-									height="200"
-							/>
+						<Image
+								src={imageUrl}
+								alt={imageAlt}
+								width="250"
+								height="200"
+						/>
 					</div>
 					<p className="text-gray-light dark:text-white-primary">{date}</p>						
 					<ul className="list-disc list-inside text-left mt-2">
