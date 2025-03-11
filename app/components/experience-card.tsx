@@ -18,7 +18,7 @@ export default function ExperienceCard({
 		classes: string,
 	}) {
 		return (
-			<div className={`rounded-lg p-4 max-w-[600px] sm:max-w-[320px] bg-gray-secondary dark:bg-gray-light text-black dark:text-white-primary border-2 border-blue-primary dark:border-gray-primary shadow-lg ${classes}`}>
+			<div className={`rounded-lg p-4 max-w-[600px] sm:max-w-[320px] bg-gray-secondary dark:bg-gray-light text-black dark:text-white-primary border-2 border-blue-primary dark:border-gray-primary shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 ${classes}`}>
 				<div className="flex-col gap-8">
 					<h2 className="text-xl font-bold">{company}</h2>
 					<h3 className="text-gray-light dark:text-white-primary">{title}</h3>						

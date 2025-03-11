@@ -11,7 +11,7 @@ export default function Experience() {
       descriptionPoints: [
         "I am excited to be part of the LCS team this summer as a C# development intern.",
       ],
-      classes: "md:ml-10",
+      classes: "sm:ml-10",
     },
     {
       title: "Front End Development Intern",
@@ -49,12 +49,12 @@ export default function Experience() {
         "Completed indoor and outdoor construction projects.",
         "Gained experience in various construction tasks including roofing and siding.",
       ],
-      classes: "md:mr-10",
+      classes: "sm:mr-10",
     },
   ];
 
   return (
-    <div className="flex flex-col gap-4 w-full max-w-[1024px] bg-gray-secondary dark:bg-black-secondary text-black dark:text-white-primary py-4 rounded-lg shadow-lg">
+    <div className="flex flex-col gap-1 w-full max-w-[1024px] bg-gray-secondary dark:bg-black-secondary text-black dark:text-white-primary py-4 rounded-lg shadow-lg">
       <h2 className="text-2xl font-bold text-left pl-6">Experience</h2>
 
       {/* Small screens: Column layout */}
@@ -65,12 +65,21 @@ export default function Experience() {
       </div>
 
       {/* Medium screens: Carousel effect */}
-      <div className="hidden sm:flex sm:flex-row sm:overflow-x-auto sm:space-x-6 p-4">
-        {jobs.map((job, index) => (
-          <div key={index} className="carousel-item flex-shrink-0">
-            <ExperienceCard {...job} />
-          </div>
-        ))}
+      <div className="relative hidden sm:block h-[420px] overflow-hidden">
+        {/* Side fade effect */}
+        <div className="absolute top-0 left-0 h-full w-12 bg-gradient-to-r from-gray-secondary dark:from-black-secondary to-transparent z-10"></div>
+        <div className="absolute top-0 right-0 h-full w-12 bg-gradient-to-l from-gray-secondary dark:from-black-secondary to-transparent z-10"></div>
+
+        <div className="flex flex-row overflow-x-auto gap-x-6 p-4 snap-x scrollbar-hidden snap-mandatory">
+          {jobs.map((job, index) => (
+            <div
+              key={index}
+              className="carousel-item flex-shrink-0"
+            >
+              <ExperienceCard {...job} />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
