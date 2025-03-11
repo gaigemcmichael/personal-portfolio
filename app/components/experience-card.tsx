@@ -18,17 +18,19 @@ export default function ExperienceCard({
 		classes: string,
 	}) {
 		return (
-			<div className={`rounded-lg p-4 max-w-80 bg-gray-secondary border-2 border-blue-primary shadow-lg ${classes}`}>
-				<div className="flex-col gap-4">
-					<h2 className="card-title">{company}</h2>
-					<h3 className="text-gray-light">{title}</h3>
-					<Image
-						src={imageUrl}
-						alt={imageAlt}
-						width="250"
-						height="200"
-					/>
-					<p className="text-gray-light">{date}</p>
+			<div className={`rounded-lg p-4 max-w-[600px] sm:max-w-[320px] bg-gray-secondary dark:bg-gray-light text-black dark:text-white-primary border-2 border-blue-primary dark:border-gray-primary shadow-lg ${classes}`}>
+				<div className="flex-col gap-8">
+					<h2 className="text-xl font-bold">{company}</h2>
+					<h3 className="text-gray-light dark:text-white-primary">{title}</h3>						
+					<div className="flex justify-center items-center my-2">
+							<Image
+									src={imageUrl}
+									alt={imageAlt}
+									width="250"
+									height="200"
+							/>
+					</div>
+					<p className="text-gray-light dark:text-white-primary">{date}</p>						
 					<ul className="list-disc list-inside text-left mt-2">
 						{descriptionPoints.map((point, index) => (
 							<li key={index} className="text-sm">{point}</li>
