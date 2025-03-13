@@ -14,10 +14,10 @@ const config: Config = {
         // Light Mode Colors
         "blue-primary": "#2563eb",
         "blue-secondary": "#1d4ed8",
-        "white-primary": "#e5e7eb", // text
-        "gray-primary": "#d6dbdc", // light background
-        "gray-secondary": "#f3f4f6", // light background for section background
-        "gray-light": "#4b5563", 
+        "white-primary": "#e5e7eb", // text (gray-200)
+        "gray-primary": "#d6dbdc", // light background (closest to gray-300)
+        "gray-secondary": "#f3f4f6", // light background for section background (gray-100)
+        "gray-light": "#4b5563", // text or dark background (gray-600)
         "red-light": "#f87171", // Light red for alerts
         "green-light": "#34d399", // Light green for success
         "yellow-light": "#fde047", // Vibrant yellow for warnings
