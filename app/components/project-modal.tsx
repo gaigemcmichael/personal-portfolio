@@ -22,7 +22,7 @@ export default function ProjectModal({
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-3 right-3 text-gray-500 hover:text-gray-light dark:text-gray-primary dark:hover:text-white text-xl"
+          className="absolute top-0.5 right-2.5 text-gray-500 hover:text-gray-light dark:text-gray-primary dark:hover:text-white text-xl"
         >
           &times;
         </button>
