@@ -1,6 +1,24 @@
+"use client"; // Ensure this is a Client Component
+
+import { useRef } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import ExperienceCard from "./experience-card";
 
 export default function Experience() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scrollLeft = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: -320, behavior: "smooth" });
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: 320, behavior: "smooth" });
+    }
+  };
+
   const jobs = [
     {
       title: "Software Developer Intern",
@@ -58,7 +76,7 @@ export default function Experience() {
   ];
 
   return (
-    <div className="flex flex-col gap-1 w-full max-w-[1024px] bg-gray-secondary dark:bg-black-secondary text-black dark:text-white-primary py-4 rounded-lg shadow-lg">
+    <div className="flex flex-col gap-1 w-full max-w-[1024px] bg-gray-secondary dark:bg-black-secondary text-black dark:text-white-primary py-4 rounded-lg shadow-lg relative">
       <h2 className="text-2xl font-bold text-left pl-6">Experience</h2>
 
       {/* Small screens: Column layout */}
@@ -70,16 +88,32 @@ export default function Experience() {
 
       {/* Medium screens: Carousel effect */}
       <div className="relative hidden sm:block h-[420px] overflow-hidden">
+        {/* Navigation Buttons */}
+        <button
+          onClick={scrollLeft}
+          className="absolute left-2 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-gray-light opacity-80 dark:bg-gray-primary hover:opacity-90 dark:opacity-70 dark:hover:opacity-95 transition"
+        >
+          <ChevronLeft className="w-5 h-5 text-white-primary dark:text-gray-light" />
+        </button>
+
+        <button
+          onClick={scrollRight}
+          className="absolute right-2 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-gray-light opacity-80 dark:bg-gray-primary hover:opacity-90 dark:opacity-70 dark:hover:opacity-95 transition"
+        >
+          <ChevronRight className="w-5 h-5 text-white-primary dark:text-gray-light" />
+        </button>
+
         {/* Side fade effect */}
         <div className="absolute top-0 left-0 h-full w-12 bg-gradient-to-r from-gray-secondary dark:from-black-secondary to-transparent z-10"></div>
         <div className="absolute top-0 right-0 h-full w-12 bg-gradient-to-l from-gray-secondary dark:from-black-secondary to-transparent z-10"></div>
 
-        <div className="flex flex-row overflow-x-auto gap-x-6 p-4 snap-x scrollbar-hidden snap-mandatory">
+        {/* Scrollable Carousel */}
+        <div
+          ref={scrollRef}
+          className="flex flex-row overflow-x-auto gap-x-6 p-4 scrollbar-hidden scroll-smooth"
+        >
           {jobs.map((job, index) => (
-            <div
-              key={index}
-              className="carousel-item flex-shrink-0"
-            >
+            <div key={index} className="carousel-item flex-shrink-0">
               <ExperienceCard {...job} />
             </div>
           ))}
