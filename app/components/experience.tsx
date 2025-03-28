@@ -76,8 +76,8 @@ export default function Experience() {
   ];
 
   return (
-    <div className="flex flex-col gap-1 w-full max-w-[1024px] bg-gray-secondary dark:bg-black-secondary text-black dark:text-white-primary py-4 rounded-lg shadow-lg relative transition-all duration-300">
-      <h2 className="text-2xl font-bold text-left pl-6">Experience</h2>
+    <div className="flex flex-col w-full max-w-[1024px] bg-gray-secondary dark:bg-black-secondary text-black dark:text-white-primary py-4 rounded-lg shadow-lg relative transition-all duration-300">
+      <h2 className="text-xl sm:text-2xl font-bold text-left pl-6">Experience</h2>
 
       {/* Small screens: Column layout */}
       <div className="flex flex-col space-y-6 sm:hidden p-4">

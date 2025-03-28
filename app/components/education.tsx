@@ -25,7 +25,7 @@ export default function EducationTimeline() {
 
   return (
     <div className="flex flex-col items-start w-full max-w-[1024px] bg-gray-secondary dark:bg-black-secondary text-black dark:text-white-primary p-6 rounded-lg shadow-lg transition-all duration-300">
-      <h2 className="text-2xl font-bold text-left mb-6">Education</h2>
+      <h2 className="text-xl sm:text-2xl font-bold text-left mb-4 sm:mb-5">Education</h2>
       
       {/* Timeline Container */}
       <div className="relative border-l-4 border-gray-primary dark:border-gray-light pl-6">
@@ -53,15 +53,15 @@ export default function EducationTimeline() {
                 </Link>
                 <div className="flex-col items-start w-full">
                   <div className="flex flex-col sm:flex-row justify-between">
-                    <h3 className="text-lg font-bold">{edu.school}</h3>
-                    <div className="flex justify-start gap-2">
-                      <p>GPA: {edu.gpa}</p>
+                    <h3 className="text-md sm:text-lg font-bold">{edu.school}</h3>
+                    <div className="flex justify-start align-center gap-2">
+                      <p className="text-sm">GPA: {edu.gpa}</p>
                       <Image
                         src="/open-book.svg"
                         alt="Open book"
                         width={25}
                         height={25}
-                        className="dark:invert"
+                        className="dark:invert h-[20px] sm:h-[25px]"
                       />
                     </div>
 

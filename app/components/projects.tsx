@@ -54,10 +54,10 @@ export default function Projects() {
 
   return (
     <div className="flex flex-col max-w-[1024px] text-left bg-gray-secondary dark:bg-black-secondary text-black dark:text-white-primary p-6 rounded-lg shadow-lg w-full transition-all duration-300">
-      <h2 className="text-2xl font-bold mb-6 text-left">Project Experience</h2>
+      <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-5 text-left">Project Experience</h2>
 
       {/* Project Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 w-full">
         {projects.map((project, index) => (
           <div
             key={index}
@@ -69,9 +69,9 @@ export default function Projects() {
               alt={project.imageAlt}
               width={300}
               height={200}
-              className="rounded-md w-full h-[200px] object-cover"
+              className="rounded-md w-full h-[150px] sm:h-[175px] object-cover"
             />
-            <h3 className="text-lg font-bold mt-3">{project.name}</h3>
+            <h3 className="text-md sm:text-lg font-bold mt-3">{project.name}</h3>
             <p className="text-sm text-gray-600 dark:text-gray-400">{project.descriptionShort}</p>
           </div>
         ))}

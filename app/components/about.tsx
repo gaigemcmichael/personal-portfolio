@@ -20,10 +20,10 @@ export default function About() {
   return (
     <div className="flex flex-col-reverse md:flex-row xl:w-[1024px] justify-between gap-5 items-center text-center md:text-left bg-gray-secondary dark:bg-black-secondary text-black dark:text-white-primary p-6 rounded-lg shadow-lg transition-all duration-300">
       <div className="flex flex-col gap-4">
-        <h2 className="text-3xl md:text-5xl font-bold">
+        <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold">
           Gaige McMichael
         </h2>
-        <h3 className="text-lg md:text-xl">
+        <h3 className="text-md sm:text-lg md:text-xl">
           A driven computer science student who currently attends The Ohio State University.
         </h3>
         <div className="flex justify-center md:justify-start gap-4">

@@ -134,7 +134,7 @@ const Navbar = () => {
                       width={20}
                       height={20}
                     />
-                    {link.buttonName}
+                    <p className="text-md">{link.buttonName}</p>
                   </Link>
                 </li>
               ))}
