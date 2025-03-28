@@ -5,3 +5,14 @@ export type Project = {
   imageUrl: string;
   imageAlt: string;
 };
+
+export type Job = {
+  title: string;
+  company: string;
+  date: string;
+  imageUrl: string;
+  imageAlt: string;
+  descriptionPoints: string[];
+  link: string;
+  classes: string;
+};

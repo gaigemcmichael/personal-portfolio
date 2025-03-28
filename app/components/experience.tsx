@@ -1,8 +1,9 @@
-"use client"; // Ensure this is a Client Component
+"use client";
 
 import { useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import ExperienceCard from "./experience-card";
+import { Job } from "../types";
 
 export default function Experience() {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -19,7 +20,7 @@ export default function Experience() {
     }
   };
 
-  const jobs = [
+  const jobs: Job[] = [
     {
       title: "Software Developer Intern",
       company: "London Computer Systems",

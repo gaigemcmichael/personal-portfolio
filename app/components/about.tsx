@@ -18,7 +18,7 @@ export default function About() {
   ];
 
   return (
-    <div className="flex flex-col-reverse md:flex-row xl:w-[1024px] justify-between gap-5 items-center text-center md:text-left bg-gray-secondary dark:bg-black-secondary text-black dark:text-white-primary p-6 rounded-lg shadow-lg transition-all duration-300">
+    <div className="flex flex-col-reverse md:flex-row xl:w-[1024px] justify-between gap-5 md:gap-8 items-center text-center md:text-left bg-gray-secondary dark:bg-black-secondary text-black dark:text-white-primary p-6 rounded-lg shadow-lg transition-all duration-300">
       <div className="flex flex-col gap-4">
         <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold">
           Gaige McMichael
@@ -26,7 +26,7 @@ export default function About() {
         <h3 className="text-md sm:text-lg md:text-xl">
           A driven computer science student who currently attends The Ohio State University.
         </h3>
-        <div className="flex justify-center md:justify-start gap-4">
+        <div className="flex justify-center md:justify-start align-center gap-4">
           {/* Social Media Links */}
           {socialLinks.map((link, index) => (
             <Link
@@ -44,6 +44,14 @@ export default function About() {
               />
             </Link>
           ))}
+          <Link
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-bold text-xs text-white-primary dark:text-black-primary bg-black-primary dark:bg-white-primary p-1 rounded"
+            >
+              Resume
+            </Link>
         </div>
       </div>
       <Image
