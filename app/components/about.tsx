@@ -27,6 +27,7 @@ export default function About() {
           A driven computer science student who currently attends The Ohio State University.
         </h3>
         <div className="flex justify-center md:justify-start gap-4">
+          {/* Social Media Links */}
           {socialLinks.map((link, index) => (
             <Link
               key={index}

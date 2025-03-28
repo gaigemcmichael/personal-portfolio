@@ -52,16 +52,17 @@ export default function EducationTimeline() {
                   />
                 </Link>
                 <div className="flex-col items-start w-full">
+                  {/* School Information */}
                   <div className="flex flex-col sm:flex-row justify-between">
                     <h3 className="text-md sm:text-lg font-bold">{edu.school}</h3>
                     <div className="flex justify-start align-center gap-2">
-                      <p className="text-sm">GPA: {edu.gpa}</p>
+                      <p className="text-md">GPA: {edu.gpa}</p>
                       <Image
                         src="/open-book.svg"
                         alt="Open book"
                         width={25}
                         height={25}
-                        className="dark:invert h-[20px] sm:h-[25px]"
+                        className="dark:invert h-[25px]"
                       />
                     </div>
 
