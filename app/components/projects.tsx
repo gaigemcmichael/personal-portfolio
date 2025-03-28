@@ -53,7 +53,7 @@ export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   return (
-    <div className="flex flex-col max-w-[1024px] text-left bg-gray-secondary dark:bg-black-secondary text-black dark:text-white-primary p-6 rounded-lg shadow-lg w-full">
+    <div className="flex flex-col max-w-[1024px] text-left bg-gray-secondary dark:bg-black-secondary text-black dark:text-white-primary p-6 rounded-lg shadow-lg w-full transition-all duration-300">
       <h2 className="text-2xl font-bold mb-6 text-left">Project Experience</h2>
 
       {/* Project Grid */}
