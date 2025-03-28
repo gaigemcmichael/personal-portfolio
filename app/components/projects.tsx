@@ -13,6 +13,13 @@ const projects: Project[] = [
     imageAlt: "Personal portfolio",
   },
   {
+    name: "Equipment Rental System",
+    descriptionShort: "Designed an equipment rental system...",
+    descriptionLong: "Developed a database for a fictional community-managed equipment rental service using SQL and Java. The system provides functionality to manage the rental of customer equipment, which is delivered by autonomous drones from warehouses. Worked in a team of four to implement and design the database schema, wrote SQL queries to manage the data, and built a terminal-based Java application to use the system.",
+    imageUrl: "/er-diagram.jpg",
+    imageAlt: "ER Diagram",
+  },
+  {
     name: "Ruoff Onboarding Website",
     descriptionShort: "A centralized webpage for onboarding...",
     descriptionLong: "Developed a centralized webpage for onboarding materials, ensuring easy access and continuous use by HR and employees. Collaborated with project manager, UI/UX manager, and back-end team to develop a data driven, responsive webpage. Developed reusable components, ensured cross-browser compatibility and accessibility, and improved user experience.",

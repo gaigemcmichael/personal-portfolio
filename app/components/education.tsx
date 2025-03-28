@@ -32,7 +32,7 @@ export default function EducationTimeline() {
         {educationData.map((edu, index) => (
           <div key={index} className={`relative ${edu.classes}`}>
             {/* Timeline Dot */}
-            <div className="absolute left-[-36px] top-[22%] sm:top-[45%] -translate-y-1/2 w-5 h-5 bg-blue-500 rounded-full border-2 border-white dark:border-transparent"></div>
+            <div className="absolute left-[-36px] top-[22%] sm:top-[45%] -translate-y-1/2 w-5 h-5 bg-blue-500 rounded-full border-2 border-white-primary dark:border-transparent"></div>
 
             {/* Timeline Content */}
             <div className="flex-col gap-2">
