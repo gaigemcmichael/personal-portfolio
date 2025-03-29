@@ -50,7 +50,7 @@ const Navbar = () => {
   return (
     <header
       ref={navRef} // Wrap the navbar in a ref
-      className="sticky top-2 z-50 md:top-4 bg-blue-primary text-white-primary dark:bg-black-secondary p-2 md:px-4 mx-2 md:mx-6 rounded-lg shadow-lg transition-all duration-300"
+      className="sticky top-2 z-50 md:top-4 bg-blue-primary text-white-primary dark:bg-black-secondary p-2 md:px-4 mx-2 md:mx-6 2xl:max-w-[1600px] 2xl:mx-auto rounded-lg shadow-lg transition-all duration-300"
     >
       <div className="container mx-auto flex justify-between items-center">
         <h1 className="text-xl font-bold">
