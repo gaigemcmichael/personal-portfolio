@@ -25,7 +25,7 @@ export default function Experience() {
       title: "Software Developer Intern",
       company: "London Computer Systems",
       date: "May 2025 - Aug 2025",
-      imageUrl: "/lcs-logo.png",
+      imageUrl: "/experience/lcs-logo.png",
       imageAlt: "London Computer Systems logo",
       descriptionPoints: [
         "I am excited to be part of the LCS team this summer as a C# development intern.",
@@ -37,7 +37,7 @@ export default function Experience() {
       title: "Front End Development Intern",
       company: "Ruoff Mortgage",
       date: "May 2024 - Aug 2024",
-      imageUrl: "/ruoff-logo.png",
+      imageUrl: "/experience/ruoff-logo.png",
       imageAlt: "Ruoff Mortgage logo",
       descriptionPoints: [
         "Developed dynamic Vue.js and Nuxt.js UI components using TypeScript and Tailwind.",
@@ -51,7 +51,7 @@ export default function Experience() {
       title: "IT Support Intern",
       company: "Ruoff Mortgage",
       date: "May 2023 - Aug 2023",
-      imageUrl: "/ruoff-logo.png",
+      imageUrl: "/experience/ruoff-logo.png",
       imageAlt: "Ruoff Mortgage logo",
       descriptionPoints: [
         "Formulated and executed a plan correcting the IT asset management system.",
@@ -65,7 +65,7 @@ export default function Experience() {
       title: "Construction Worker",
       company: "Hughes Gutters & More",
       date: "May 2022 - Aug 2022",
-      imageUrl: "/hughes-gutters.jpg",
+      imageUrl: "/experience/hughes-gutters.jpg",
       imageAlt: "Hughes Gutters & More logo",
       descriptionPoints: [
         "Completed indoor and outdoor construction projects.",

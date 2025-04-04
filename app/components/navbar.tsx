@@ -28,19 +28,19 @@ const Navbar = () => {
 
   const navLinks = [
     {
-      src: "/home.svg",
+      src: "/navbar/home.svg",
       alt: "Home button",
       imageClasses: "cursor-pointer hover:opacity-80",
       buttonName: "Home",
     },
     {
-      src: "/profile.svg",
+      src: "/navbar/profile.svg",
       alt: "About button",
       imageClasses: "cursor-pointer hover:opacity-80",
       buttonName: "About",
     },
     {
-      src: "/email.svg",
+      src: "/navbar/email.svg",
       alt: "Contact button",
       imageClasses: "cursor-pointer hover:opacity-80",
       buttonName: "Contact",
@@ -101,7 +101,7 @@ const Navbar = () => {
               <svg
                 className="h-6 w-6"
                 fill="none"
-                stroke="currentColor"
+                stroke="#e5e7eb"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >

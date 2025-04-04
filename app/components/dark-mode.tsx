@@ -24,7 +24,7 @@ export default function DarkMode(): JSX.Element {
       >
         {/* Moon Icon */}
         <Image
-          src="/moon.svg"
+          src="/navbar/moon.svg"
           alt="moon icon"
           width={30}
           height={30}
@@ -34,7 +34,7 @@ export default function DarkMode(): JSX.Element {
         />
         {/* Sun Icon */}
         <Image
-          src="/sun.svg"
+          src="/navbar/sun.svg"
           alt="sun icon"
           width={30}
           height={30}

@@ -5,13 +5,13 @@ export default function About() {
   const socialLinks = [
     {
       href: "https://github.com/gaigemcmichael/",
-      src: "/github.svg",
+      src: "/about/github.svg",
       alt: "GitHub button",
       classes: "dark:invert cursor-pointer hover:opacity-80",
     },
     {
       href: "https://www.linkedin.com/in/gaigemcmichael/",
-      src: "/linkedin.svg",
+      src: "/about/linkedin.svg",
       alt: "LinkedIn button",
       classes: "bg-white-primary rounded-md cursor-pointer hover:opacity-80",
     },
@@ -45,7 +45,7 @@ export default function About() {
             </Link>
           ))}
           <Link
-              href="/resume.pdf"
+              href="/about/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="font-bold text-xs text-white-primary dark:text-black-primary bg-black-primary dark:bg-white-primary p-1 rounded"
@@ -55,7 +55,7 @@ export default function About() {
         </div>
       </div>
       <Image
-        src="/profile.jpeg"
+        src="/about/profile.jpeg"
         alt="Gaige's profile picture"
         className="rounded-full border-4 border-blue-primary dark:border-blue-primary-dark"
         width={175}

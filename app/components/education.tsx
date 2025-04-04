@@ -6,7 +6,7 @@ export default function EducationTimeline() {
     {
       school: "Ohio State University",
       date: "2022 - Present",
-      image: "/blockO.jpg",
+      image: "/education/blockO.jpg",
       description: "Pursuing a Bachelor’s degree in Computer Science & Engineering, specializing in software engineering.",
       gpa: "3.9/4.0",
       link: "https://osu.edu/",
@@ -15,7 +15,7 @@ export default function EducationTimeline() {
     {
       school: "Antwerp High School",
       date: "2018 - 2022",
-      image: "/archer.png",
+      image: "/education/archer.png",
       description: "Graduated valedictorian, participated in National Honor Society and student council, and played golf, basketball, and track & field.",
       gpa: "4.0/4.0",
       link: "https://www.antwerpschools.org/",
@@ -58,7 +58,7 @@ export default function EducationTimeline() {
                     <div className="flex justify-start align-center gap-2">
                       <p className="text-md">GPA: {edu.gpa}</p>
                       <Image
-                        src="/open-book.svg"
+                        src="/education/open-book.svg"
                         alt="Open book"
                         width={25}
                         height={25}
