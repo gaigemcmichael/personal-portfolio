@@ -70,11 +70,11 @@ const Navbar = () => {
                       <Image
                         src={link.src}
                         alt={link.alt}
-                        className="cursor-pointer hover:opacity-80"
+                        className="cursor-pointer group-hover:opacity-80"
                         width={20}
                         height={20}
                       />
-                      <span className="relative">
+                      <span className="relative group-hover:opacity-80">
                         {link.buttonName}
                         <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white-primary transition-all duration-300 group-hover:w-full"></span>
                       </span>
