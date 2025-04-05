@@ -48,7 +48,7 @@ export default function About() {
               href="/about/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-bold text-xs text-white-primary dark:text-black-primary bg-black-primary dark:bg-white-primary p-1 rounded"
+              className="font-bold text-xs text-white-primary dark:text-black-primary bg-black-primary dark:bg-white-primary p-1 rounded hover:opacity-80"
             >
               Resume
             </Link>
