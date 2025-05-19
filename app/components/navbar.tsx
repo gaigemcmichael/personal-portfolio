@@ -49,8 +49,8 @@ const Navbar = () => {
 
   return (
     <header
-      ref={navRef} // Wrap the navbar in a ref
-      className="sticky top-2 z-50 md:top-4 bg-blue-primary text-white-primary dark:bg-black-secondary p-2 md:px-4 mx-2 md:mx-6 2xl:max-w-[1600px] 2xl:mx-auto rounded-lg shadow-lg transition-all duration-300"
+      ref={navRef}
+      className="sticky top-2 z-50 md:top-4 bg-blue-primary text-white-primary dark:bg-black-secondary p-2 md:px-4 mx-2 md:mx-6 2xl:max-w-[1600px] 2xl:mx-auto rounded-lg shadow-lg transition-all duration-300 before:absolute before:inset-x-0 before:top-[-1.0rem] before:h-4 before:bg-gray-primary dark:before:bg-black-primary"
     >
       <div className="container mx-auto flex justify-between items-center">
         <h1 className="text-xl font-bold">
@@ -93,7 +93,7 @@ const Navbar = () => {
           <div className="md:hidden hover:opacity-80">
             <button
               onClick={(event) => {
-                event.stopPropagation(); // Prevent event from reaching document
+                event.stopPropagation();
                 setIsOpen(!isOpen);
               }}
               aria-label="Toggle Menu"
