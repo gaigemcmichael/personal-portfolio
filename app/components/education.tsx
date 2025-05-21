@@ -58,7 +58,7 @@ export default function EducationTimeline() {
                     <div className="flex justify-start align-center gap-2">
                       <p className="text-md">GPA: {edu.gpa}</p>
                       <Image
-                        src="/education/open-book.svg"
+                        src="/education/open-book-black.svg"
                         alt="Open book"
                         width={25}
                         height={25}

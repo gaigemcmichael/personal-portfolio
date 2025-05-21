@@ -32,18 +32,35 @@ const Navbar = () => {
       alt: "Home button",
       imageClasses: "cursor-pointer hover:opacity-80",
       buttonName: "Home",
+      size: 20,
     },
     {
-      src: "/navbar/profile.svg",
-      alt: "About button",
+      src: "/navbar/open-book-white.svg",
+      alt: "Education button",
       imageClasses: "cursor-pointer hover:opacity-80",
-      buttonName: "About",
+      buttonName: "Education",
+      size: 25,
+    },
+    {
+      src: "/navbar/project.svg",
+      alt: "Projects button",
+      imageClasses: "cursor-pointer hover:opacity-80",
+      buttonName: "Projects",
+      size: 20,
+    },
+    {
+      src: "/navbar/skill.svg",
+      alt: "Skills button",
+      imageClasses: "cursor-pointer hover:opacity-80",
+      buttonName: "Skills",
+      size: 20,
     },
     {
       src: "/navbar/email.svg",
       alt: "Contact button",
       imageClasses: "cursor-pointer hover:opacity-80",
       buttonName: "Contact",
+      size: 25,
     },
   ];
 
@@ -65,14 +82,14 @@ const Navbar = () => {
                     <Link
                       key={index}
                       href="/"
-                      className="relative flex gap-1 hover:opacity-80 transition-all duration-300 group"
+                      className="relative flex gap-1 items-center hover:opacity-80 transition-all duration-300 group"
                     >
                       <Image
                         src={link.src}
                         alt={link.alt}
                         className="cursor-pointer group-hover:opacity-80"
-                        width={20}
-                        height={20}
+                        width={link.size}
+                        height={link.size}
                       />
                       <span className="relative group-hover:opacity-80">
                         {link.buttonName}
