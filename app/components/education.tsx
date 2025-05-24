@@ -24,7 +24,7 @@ export default function EducationTimeline() {
   ];
 
   return (
-    <div className="flex flex-col items-start w-full max-w-[1024px] bg-gray-secondary dark:bg-black-secondary text-black dark:text-white-primary p-6 rounded-lg shadow-lg transition-all duration-300">
+    <div id="education" className="flex flex-col items-start w-full max-w-[1024px] bg-gray-secondary dark:bg-black-secondary text-black dark:text-white-primary p-6 rounded-lg shadow-lg transition-all duration-300 scroll-m-[80px] sm:scroll-m-[90px]">
       <h2 className="text-xl sm:text-2xl font-bold text-left mb-4 sm:mb-5">Education</h2>
       
       {/* Timeline Container */}

@@ -47,7 +47,7 @@ export default function Contact() {
   }, [status]);
 
   return (
-    <div className="flex flex-col max-w-[1024px] bg-gray-secondary dark:bg-black-secondary text-black dark:text-white-primary p-6 rounded-lg shadow-lg w-full transition-all duration-300">
+    <div id="contact" className="flex flex-col max-w-[1024px] bg-gray-secondary dark:bg-black-secondary text-black dark:text-white-primary p-6 rounded-lg shadow-lg w-full transition-all duration-300 scroll-m-[80px] sm:scroll-m-[90px]">
       <h2 className="text-xl sm:text-2xl font-bold mb-5">Contact Me</h2>
 
       <AnimatePresence>

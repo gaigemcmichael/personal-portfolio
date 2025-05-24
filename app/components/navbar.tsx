@@ -4,13 +4,13 @@ import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import DarkMode from './dark-mode';
+import ScrollLinkButton from './scroll-button';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const navRef = useRef<HTMLDivElement | null>(null); // Wrap entire navbar
+  const navRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    // Close the menu when clicking outside the entire navbar
     const handleClickOutside = (event: MouseEvent) => {
       if (navRef.current && !navRef.current.contains(event.target as Node)) {
         setIsOpen(false);
@@ -28,37 +28,37 @@ const Navbar = () => {
 
   const navLinks = [
     {
+      id: "home",
       src: "/navbar/home.svg",
       alt: "Home button",
-      imageClasses: "cursor-pointer hover:opacity-80",
       buttonName: "Home",
       size: 20,
     },
     {
+      id: "education",
       src: "/navbar/open-book-white.svg",
       alt: "Education button",
-      imageClasses: "cursor-pointer hover:opacity-80",
       buttonName: "Education",
       size: 25,
     },
     {
+      id: "projects",
       src: "/navbar/project.svg",
       alt: "Projects button",
-      imageClasses: "cursor-pointer hover:opacity-80",
       buttonName: "Projects",
       size: 20,
     },
     {
+      id: "skills",
       src: "/navbar/skill.svg",
       alt: "Skills button",
-      imageClasses: "cursor-pointer hover:opacity-80",
       buttonName: "Skills",
       size: 20,
     },
     {
+      id: "contact",
       src: "/navbar/email.svg",
       alt: "Contact button",
-      imageClasses: "cursor-pointer hover:opacity-80",
       buttonName: "Contact",
       size: 25,
     },
@@ -71,34 +71,27 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex justify-between items-center">
         <h1 className="text-xl font-bold">
-          <Link href="/">Gaige McMichael</Link>
+          <ScrollLinkButton
+            id={navLinks[0].id}
+            label="Gaige McMichael"
+            src={navLinks[0].src}
+            size={navLinks[0].size}
+          />
         </h1>
         <div className="flex items-center gap-4">
           {/* Desktop Links */}
           <nav className="hidden md:block">
             <ul className="flex items-center space-x-4">
-                {navLinks.map((link, index) => (
-                  <li key={index}>
-                    <Link
-                      key={index}
-                      href="/"
-                      className="relative flex gap-1 items-center hover:opacity-80 transition-all duration-300 group"
-                    >
-                      <Image
-                        src={link.src}
-                        alt={link.alt}
-                        className="cursor-pointer group-hover:opacity-80"
-                        width={link.size}
-                        height={link.size}
-                      />
-                      <span className="relative group-hover:opacity-80">
-                        {link.buttonName}
-                        <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white-primary transition-all duration-300 group-hover:w-full"></span>
-                      </span>
-                      <div className="relative bottom-0 h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
-                    </Link>
-                  </li>
-              ))}
+            {navLinks.map((link, index) => (
+              <li key={index}>
+                <ScrollLinkButton
+                  id={link.id}
+                  label={link.buttonName}
+                  src={link.src}
+                  size={link.size}
+                />
+              </li>
+            ))}
             </ul>
           </nav>
         </div>
@@ -136,25 +129,17 @@ const Navbar = () => {
         >
           <nav>
             <ul className="flex flex-col gap-y-4 text-right">
-              {navLinks.map((link, index) => (
-                <li key="index" className="text-right">
-                  <Link
-                    key={index}
-                    href="/"
-                    className="flex gap-2 justify-end py-2 px-4 text-white-primary hover:bg-gray-light rounded transition-all"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    <Image
-                      src={link.src}
-                      alt={link.alt}
-                      className="cursor-pointer hover:opacity-80"
-                      width={20}
-                      height={20}
-                    />
-                    <p className="text-md">{link.buttonName}</p>
-                  </Link>
-                </li>
-              ))}
+            {navLinks.map((link, index) => (
+              <li key={index}>
+                <ScrollLinkButton
+                  id={link.id}
+                  label={link.buttonName}
+                  src={link.src}
+                  size={link.size}
+                  onClick={() => setIsOpen(false)}
+                />
+              </li>
+            ))}
             </ul>
           </nav>
         </div>

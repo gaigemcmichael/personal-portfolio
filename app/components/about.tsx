@@ -18,7 +18,7 @@ export default function About() {
   ];
 
   return (
-    <div className="flex flex-col-reverse md:flex-row xl:w-[1024px] justify-between gap-5 md:gap-8 items-center text-center md:text-left bg-gray-secondary dark:bg-black-secondary text-black dark:text-white-primary p-6 rounded-lg shadow-lg transition-all duration-300">
+    <div id="home" className="flex flex-col-reverse md:flex-row xl:w-[1024px] justify-between gap-5 md:gap-8 items-center text-center md:text-left bg-gray-secondary dark:bg-black-secondary text-black dark:text-white-primary p-6 rounded-lg shadow-lg transition-all duration-300 scroll-m-[80px] sm:scroll-m-[90px]">
       <div className="flex flex-col gap-4">
         <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold">
           Gaige McMichael

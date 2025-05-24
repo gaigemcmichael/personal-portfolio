@@ -32,7 +32,7 @@ const skills = [
 
 export default function Skills() {
   return (
-    <div className="flex flex-col max-w-[1024px] text-left bg-gray-secondary dark:bg-black-secondary text-black dark:text-white-primary p-6 rounded-lg shadow-lg w-full transition-all duration-300">
+    <div id="skills" className="flex flex-col max-w-[1024px] text-left bg-gray-secondary dark:bg-black-secondary text-black dark:text-white-primary p-6 rounded-lg shadow-lg w-full transition-all duration-300 scroll-m-[80px] sm:scroll-m-[90px]">
       <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-5 text-left">Skills</h2>
 
       {/* Skills Grid */}
