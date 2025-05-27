@@ -3,8 +3,9 @@ import Image from "next/image";
 const skills = [
   // Core Programming Languages
   { name: "Java", imageUrl: "/skills/java.png", imageAlt: "Java" },
-  { name: "C", imageUrl: "/skills/c.png", imageAlt: "C programming language" },
-  { name: "C++", imageUrl: "/skills/c++.png", imageAlt: "C++ programming language" },
+  { name: "C#", imageUrl: "/skills/c-sharp.png", imageAlt: "C#" },
+  { name: "C", imageUrl: "/skills/c.png", imageAlt: "C" },
+  { name: "C++", imageUrl: "/skills/c++.png", imageAlt: "C++" },
   { name: "Python", imageUrl: "/skills/python.png", imageAlt: "Python" },
   { name: "SQL", imageUrl: "/skills/sql.png", imageAlt: "SQL" },
 
@@ -21,6 +22,7 @@ const skills = [
   { name: "React", imageUrl: "/skills/react.svg", imageAlt: "React.js" },
   { name: "Next.js", imageUrl: "/skills/nextjs.png", imageAlt: "Next.js" },
   { name: "Node.js", imageUrl: "/skills/nodejs.png", imageAlt: "Node.js" },
+  { name: ".NET", imageUrl: "/skills/dotnet.png", imageAlt: ".NET" },
 
   // Tools & Platforms
   { name: "Git", imageUrl: "/skills/git.png", imageAlt: "Git version control" },
@@ -28,6 +30,9 @@ const skills = [
 
   //Software concepts
   { name: "OOP", imageUrl: "/skills/oop.webp", imageAlt: "Object-Oriented Programming (OOP)" },
+  { name: "Data Structures", imageUrl: "/skills/data-structures.png", imageAlt: "Data Structures" },
+  { name: "Algorithms", imageUrl: "/skills/algorithms.png", imageAlt: "Algorithms" },
+  { name: "Rest APIs", imageUrl: "/skills/rest-api.png", imageAlt: "Rest APIs" },
 ];
 
 export default function Skills() {
