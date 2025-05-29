@@ -1,10 +1,9 @@
 'use client';
 
-import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
-import Image from 'next/image';
 import DarkMode from './dark-mode';
 import ScrollLinkButton from './scroll-button';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -123,27 +122,40 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Navigation Links */}
-      {isOpen && (
-        <div
-          className="md:hidden absolute left-1/2 -translate-x-1/2 top-[60px] w-[90%] sm:w-[95%] bg-black-primary bg-opacity-90 p-4 rounded-b-lg transition-all duration-300 opacity-100 scale-100"
-        >
-          <nav>
-            <ul className="flex flex-col gap-y-4 text-right">
-            {navLinks.map((link, index) => (
-              <li key={index}>
-                <ScrollLinkButton
-                  id={link.id}
-                  label={link.buttonName}
-                  src={link.src}
-                  size={link.size}
-                  onClick={() => setIsOpen(false)}
-                />
-              </li>
-            ))}
-            </ul>
-          </nav>
-        </div>
-      )}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            key="mobile-menu"
+            initial={{ opacity: 0, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 0 }}
+            transition={{ duration: 0.3 }}
+            className="md:hidden absolute left-0 right-0 top-[54px] mx-auto w-[calc(100%-2rem)] max-w-[600px] bg-black-primary bg-opacity-90 p-4 mt-2 rounded-b-lg z-40 transition-all duration-300"
+          >
+            <nav>
+              <ul className="flex flex-col gap-y-4 text-left items-left">
+                {navLinks.map((link, index) => (
+                  <motion.li
+                    key={index}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: 20 }}
+                    transition={{ delay: index * 0.05 }}
+                  >
+                    <ScrollLinkButton
+                      id={link.id}
+                      label={link.buttonName}
+                      src={link.src}
+                      size={link.size}
+                      onClick={() => setIsOpen(false)}
+                    />
+                  </motion.li>
+                ))}
+              </ul>
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 };
