@@ -68,6 +68,7 @@ export default function Contact() {
             required
             value={formData.name}
             onChange={handleChange}
+            autoComplete="name"
             placeholder="Enter your name"
             className="w-full mt-1 bg-white-primary dark:bg-black-primary p-3 rounded-md border border-gray-primary dark:border-black-secondary focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
@@ -84,6 +85,7 @@ export default function Contact() {
             required
             value={formData.email}
             onChange={handleChange}
+            autoComplete="email"
             placeholder="Enter your email"
             className="w-full mt-1 bg-white-primary dark:bg-black-primary p-3 rounded-md border border-gray-primary dark:border-black-secondary focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
@@ -99,6 +101,7 @@ export default function Contact() {
             type="tel"
             value={formData.phone}
             onChange={handleChange}
+            autoComplete="tel"
             placeholder="Enter your phone number"
             className="w-full mt-1 bg-white-primary dark:bg-black-primary p-3 rounded-md border border-gray-primary dark:border-black-secondary focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
@@ -114,6 +117,7 @@ export default function Contact() {
             type="text"
             value={formData.company}
             onChange={handleChange}
+            autoComplete="organization"
             placeholder="Enter your company name"
             className="w-full mt-1 bg-white-primary dark:bg-black-primary p-3 rounded-md border border-gray-primary dark:border-black-secondary focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
@@ -129,6 +133,7 @@ export default function Contact() {
             required
             value={formData.message}
             onChange={handleChange}
+            autoComplete="off"
             placeholder="Write your message here"
             rows={4}
             className="w-full mt-1 bg-white-primary dark:bg-black-primary p-3 rounded-md border border-gray-primary dark:border-black-secondary focus:outline-none focus:ring-2 focus:ring-blue-500"

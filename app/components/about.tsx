@@ -40,7 +40,7 @@ export default function About() {
                 alt={link.alt}
                 className={link.classes}
                 width={25}
-                height={20}
+                height={25}
               />
             </Link>
           ))}
@@ -60,6 +60,7 @@ export default function About() {
         className="rounded-full border-4 border-blue-primary dark:border-blue-primary-dark"
         width={175}
         height={175}
+        priority
       />
     </div>
   );

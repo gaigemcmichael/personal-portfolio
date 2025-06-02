@@ -28,7 +28,7 @@ export default function Experience() {
       imageUrl: "/experience/lcs-logo.png",
       imageAlt: "London Computer Systems logo",
       descriptionPoints: [
-        "I am excited to be part of the LCS team this summer as a C# development intern.",
+        "I am excited to have joined LCS this summer as a backend development intern on API development team.",
       ],
       link: "https://www.lcs.com/",
       classes: "sm:ml-10",

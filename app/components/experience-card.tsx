@@ -26,19 +26,20 @@ export default function ExperienceCard({
 					<h2 className="text-lg sm:text-xl font-bold">{company}</h2>
 					<h3 className="text-gray-light dark:text-white-primary text-md">{title}</h3>						
 					<div className="flex justify-center items-center my-2">
-						<Link
-							href={link}
-							target="_blank"
-							rel="noopener noreferrer"
-							className="w-[175px] sm:min-w-[250px]"
-						>
-							<Image
-								src={imageUrl}
-								alt={imageAlt}
-								width="250"
-								height="200"
-							/>
-						</Link>
+					<Link
+						href={link}
+						target="_blank"
+						rel="noopener noreferrer"
+						className="w-[200px] sm:w-[250px] max-w-full"
+					>
+						<Image
+							src={imageUrl}
+							alt={imageAlt}
+							width={250}
+							height={200}
+							className="w-full h-auto object-contain"
+						/>
+					</Link>
 					</div>
 					<p className="text-gray-light dark:text-white-primary text-md">{date}</p>						
 					<ul className="list-disc list-inside text-left mt-2">
