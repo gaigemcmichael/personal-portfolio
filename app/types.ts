@@ -12,6 +12,8 @@ export type Job = {
   date: string;
   imageUrl: string;
   imageAlt: string;
+  imageWidth: number;
+  imageHeight: number;
   descriptionPoints: string[];
   link: string;
   classes: string;

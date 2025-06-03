@@ -27,6 +27,8 @@ export default function Experience() {
       date: "May 2025 - Aug 2025",
       imageUrl: "/experience/lcs-logo.png",
       imageAlt: "London Computer Systems logo",
+      imageWidth: 550,
+      imageHeight: 200,
       descriptionPoints: [
         "I am excited to have joined LCS this summer as a backend development intern on API development team.",
       ],
@@ -39,6 +41,8 @@ export default function Experience() {
       date: "May 2024 - Aug 2024",
       imageUrl: "/experience/ruoff-logo.png",
       imageAlt: "Ruoff Mortgage logo",
+      imageWidth: 550,
+      imageHeight: 200,
       descriptionPoints: [
         "Developed dynamic Vue.js and Nuxt.js UI components using TypeScript and Tailwind.",
         "Collaborated with back-end and design teams to improve UX.",
@@ -53,6 +57,8 @@ export default function Experience() {
       date: "May 2023 - Aug 2023",
       imageUrl: "/experience/ruoff-logo.png",
       imageAlt: "Ruoff Mortgage logo",
+      imageWidth: 550,
+      imageHeight: 200,
       descriptionPoints: [
         "Formulated and executed a plan correcting the IT asset management system.",
         "Earned company revenue through Dell's recycling program.",
@@ -67,6 +73,8 @@ export default function Experience() {
       date: "May 2022 - Aug 2022",
       imageUrl: "/experience/hughes-gutters.jpg",
       imageAlt: "Hughes Gutters & More logo",
+      imageWidth: 550,
+      imageHeight: 200,
       descriptionPoints: [
         "Completed indoor and outdoor construction projects.",
         "Gained experience in various construction tasks including roofing and siding.",

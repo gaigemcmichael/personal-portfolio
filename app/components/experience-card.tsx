@@ -8,6 +8,8 @@ export default function ExperienceCard({
 		descriptionPoints,
 		imageUrl,
 		imageAlt,
+		imageWidth,
+		imageHeight,
 		link,
 		classes,
 	}: {
@@ -17,6 +19,8 @@ export default function ExperienceCard({
 		descriptionPoints: string[];
 		imageUrl: string;
 		imageAlt: string;
+		imageWidth: number;
+		imageHeight: number;
 		link: string;
 		classes: string,
 	}) {
@@ -35,9 +39,8 @@ export default function ExperienceCard({
 						<Image
 							src={imageUrl}
 							alt={imageAlt}
-							width={250}
-							height={200}
-							className="w-full h-auto object-contain"
+							width={imageWidth}
+							height={imageHeight}
 						/>
 					</Link>
 					</div>
