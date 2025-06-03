@@ -4,6 +4,12 @@ import { useState, useEffect } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import ConfirmationModal from '../components/confirmation-modal';
 
+declare global {
+  interface Window {
+    grecaptcha: any;
+  }
+}
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -14,21 +20,51 @@ export default function Contact() {
   });
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
 
+  useEffect(() => {
+    const scriptId = 'recaptcha-script';
+    if (!document.getElementById(scriptId)) {
+      const script = document.createElement('script');
+      script.id = scriptId;
+      script.src = 'https://www.google.com/recaptcha/api.js?render=explicit';
+      script.async = true;
+      script.defer = true;
+      document.body.appendChild(script);
+    }
+  }, []);
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
-    setFormData(f => ({ ...f, [name]: value }));
+    setFormData((f) => ({ ...f, [name]: value }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('sending');
 
+    const captchaToken = await new Promise<string>((resolve, reject) => {
+      if (!window.grecaptcha) {
+        reject('reCAPTCHA not loaded');
+      }
+
+      window.grecaptcha.ready(() => {
+        window.grecaptcha.execute(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!, { action: 'submit' })
+          .then(resolve)
+          .catch(reject);
+      });
+    }).catch((err) => {
+      console.error('Captcha error:', err);
+      setStatus('error');
+      return null;
+    });
+
+    if (!captchaToken) return;
+
     const res = await fetch('/api/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData),
+      body: JSON.stringify({ ...formData, captchaToken }),
     });
 
     if (res.ok) {
@@ -52,9 +88,15 @@ export default function Contact() {
 
       <AnimatePresence>
       {(status === 'success' || status === 'error') && (
-        <ConfirmationModal status={"success"} onClose={() => setStatus('idle')} />
+        <ConfirmationModal status={status} onClose={() => setStatus('idle')} />
       )}
       </AnimatePresence>
+
+      <script
+        src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
+        async
+        defer
+      ></script>
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <div>
@@ -153,12 +195,6 @@ export default function Contact() {
         I do not share any of your information with anyone. Feel free to reach out to me through here or through other means like LinkedIn.
       </p>
 
-      {status === 'success' && (
-        <p className="mt-4 text-green-light">Your message was sent successfully!</p>
-      )}
-      {status === 'error' && (
-        <p className="mt-4 text-red-light">Oops—something went wrong. Please try again.</p>
-      )}
     </div>
   );
 }
