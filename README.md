@@ -1,30 +1,55 @@
-# `WELCOME!`
+# Welcome to My Portfolio
 
-## Please feel free to access my website [here](https://google.com/).
+Explore the live site [myportfolio.com](https://google.com)
+
+---
 
 ## Getting Started
 
-First, run the development server:
+To run this project locally:
 
 ```bash
+# Using npm
+npm install
 npm run dev
-# or
+
+# Or with yarn
+yarn install
 yarn dev
-# or
+
+# Or with pnpm
+pnpm install
 pnpm dev
-# or
+
+# Or with bun
+bun install
 bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to view.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Features
 
-## Learn More
+- **Built with Next.js**  
+  Uses Next.js for the benefits of server-side rendering, routing, and performance.
 
-To learn more about Next.js, take a look at the following resources:
+- **Styled with Tailwind CSS**  
+  Used Tailwind CSS for rapid custom development of UI components.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Written in TypeScript**  
+  Strongly typed codebase for maintainability and improved developer experience.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- **Responsive Design**  
+  Provides a consistent experience for users across different platforms.
+
+- **Dark Mode Support**  
+  Adapts the color scheme to match user preferences, and offers light or dark themes.
+
+- **Contact Form with Nodemailer + OAuth2**  
+  Users can reach out through a functional contact form powered by secure email sending.
+
+- **Protected with Google reCAPTCHA v3**  
+  Maintains a smooth user experience while preventing spam and abuse.
+
+- **Deployed**  
+  Deployed to [Deploy Site](https://google.com) with seamless integration.
