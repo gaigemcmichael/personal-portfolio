@@ -1,6 +1,6 @@
 # Welcome to My Portfolio
 
-Explore the live site [myportfolio.com](https://google.com)
+Explore the live site [https://personal-portfolio-gaigemc.vercel.app/](https://personal-portfolio-gaigemc.vercel.app/)
 
 ---
 
@@ -51,5 +51,5 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to view.
 - **Protected with Google reCAPTCHA v3**  
   Maintains a smooth user experience while preventing spam and abuse.
 
-- **Deployed**  
-  Deployed to [Deploy Site](https://google.com) with seamless integration.
+- **Deployed Using Deploy Site**  
+  Deployed using [Vercel](https://vercel.com/) with seamless integration.

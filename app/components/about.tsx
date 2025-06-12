@@ -44,14 +44,14 @@ export default function About() {
               />
             </Link>
           ))}
-          <Link
-              href="/about/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-bold text-xs text-white-primary dark:text-black-primary bg-black-primary dark:bg-white-primary p-1 rounded hover:opacity-80"
-            >
-              Resume
-            </Link>
+          <a
+            href="/about/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-bold text-xs text-white-primary dark:text-black-primary bg-black-primary dark:bg-white-primary p-1 rounded hover:opacity-80"
+          >
+            Resume
+          </a>
         </div>
       </div>
       <Image

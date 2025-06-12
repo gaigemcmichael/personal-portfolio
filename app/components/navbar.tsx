@@ -126,11 +126,11 @@ const Navbar = () => {
         {isOpen && (
           <motion.div
             key="mobile-menu"
-            initial={{ opacity: 0, y: 0 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 0 }}
-            transition={{ duration: 0.3 }}
-            className="md:hidden absolute left-0 right-0 top-[54px] mx-auto w-[calc(100%-2rem)] max-w-[600px] bg-black-primary bg-opacity-90 p-4 mt-2 rounded-b-lg z-40 transition-all duration-300"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="md:hidden absolute left-0 right-0 top-[54px] mx-auto w-[calc(100%-2rem)] max-w-[600px] bg-black-primary bg-opacity-90 p-4 mt-2 rounded-b-lg z-40"
           >
             <nav>
               <ul className="flex flex-col gap-y-4 text-left items-left">

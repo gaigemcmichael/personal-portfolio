@@ -60,8 +60,8 @@ export async function POST(request: Request) {
     });
 
     return NextResponse.json({ ok: true });
-  } catch (err) {
-    console.error('Server error:', err);
+  } catch (err: any) {
+    console.error('Server error:', err?.response?.data || err.message || err);
     return NextResponse.json({ error: 'Server error' }, { status: 500 });
   }
 }

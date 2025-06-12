@@ -18,18 +18,16 @@ export default function ConfirmationModal({
       animate={{ y: 0, opacity: 1 }}
       exit={{ y: -50, opacity: 0 }}
       transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-      className="fixed top-[85px] inset-x-0 mx-auto w-max bg-white-primary dark:bg-gray-light border-2 border-blue-primary dark:border-gray-primary px-6 py-3 rounded-lg shadow-lg z-40 flex items-center gap-3"
+      className="fixed top-[85px] inset-x-4 sm:inset-x-0 mx-auto max-w-[90%] sm:max-w-md bg-white-primary dark:bg-gray-light border-2 border-blue-primary dark:border-gray-primary px-4 sm:px-6 py-3 rounded-lg shadow-lg z-40 flex items-center justify-between gap-3"
     >
-      <p
-        className="text-sm font-bold text-black-primary dark:text-white-primary"
-      >
+      <p className="text-sm font-bold text-black-primary dark:text-white-primary">
         {status === 'success'
           ? 'Your message was sent successfully!'
           : 'Oops—something went wrong. Please try again.'}
       </p>
       <button
         onClick={onClose}
-        className="text-black-primary dark:text-gray-primary hover:text-gray-500 dark:hover:text-gray-400"
+        className="text-black-primary dark:text-gray-primary hover:text-gray-500 dark:hover:text-gray-400 text-lg"
         aria-label="Close notification"
       >
         ✕
