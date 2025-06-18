@@ -7,9 +7,19 @@ import Footer from './components/footer';
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Gaige's Portfolio",
-  description: "The personal portfolio of Gaige McMichael, Antwerp Ohio.",
-};
+  title: 'Gaige\'s Portfolio',
+  description: 'The personal portfolio of Gaige McMichael, Antwerp Ohio.',
+  keywords: ['portfolio', 'developer', 'designer', 'engineer'],
+  authors: [{ name: 'Gaige McMichael' }],
+  openGraph: {
+    title: 'Gaige\'s Portfolio',
+    description: 'Professional portfolio showcasing my work and skills',
+    url: 'https://personal-portfolio-gaigemc.vercel.app/',
+    siteName: 'Gaige\'s Portfolio',
+    locale: 'en_US',
+    type: 'website',
+  },
+}
 
 export default function RootLayout({
   children,
