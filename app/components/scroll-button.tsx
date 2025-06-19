@@ -22,7 +22,7 @@ const ScrollLinkButton = ({ id, label, src, size, onClick }: ScrollLinkButtonPro
   return (
     <button
       onClick={handleClick}
-      className="flex items-center gap-2 w-full px-4 py-2 text-left hover:bg-white hover:bg-opacity-10 transition-all duration-200 rounded"
+      className="flex items-center text-left gap-1 w-full hover:opacity-80 transition-all duration-300 group"
     >
       {label !== 'Gaige McMichael' && (
         <Image
@@ -30,11 +30,15 @@ const ScrollLinkButton = ({ id, label, src, size, onClick }: ScrollLinkButtonPro
           alt={label}
           width={size}
           height={size}
-          className="pointer-events-none"
+          className={"cursor-pointer group-hover:opacity-80"}
         />
       )}
-      <span className="w-full">{label}</span>
+      <span className="relative group-hover:opacity-80 w-full">
+        {label}
+        <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white-primary transition-all duration-300 group-hover:w-full"></span>
+      </span>
     </button>
+    
   );
 };
 
