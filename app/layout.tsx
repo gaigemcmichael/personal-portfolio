@@ -28,6 +28,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="google-site-verification" content="Nrur5CY1BCRFI5jtRw6zGUU_-CRj7vjpHPP_LyBdTd0" />
+      </head>
       <body className="dark:bg-black-primary">
         <NavBar/>
         <main className="px-2 md:px-8 mt-5 md:mt-8 pb-8 dark:bg-black-primary">{children}</main>
