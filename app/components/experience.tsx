@@ -30,7 +30,9 @@ export default function Experience() {
       imageWidth: 550,
       imageHeight: 200,
       descriptionPoints: [
-        "I am excited to have joined LCS this summer as a backend development intern on API development team.",
+        "Developed RESTful APIs using C#/.NET and SQL to enhance the functionality of the Rent Manager.",
+        "Maintained API, business, and data layer logic for CRUD operations to ensure robust data management.",
+        "Resolved 10+ bug tickets and delivered 13 API tickets for enhancements and new features.",
       ],
       link: "https://www.lcs.com/",
       classes: "sm:ml-10",

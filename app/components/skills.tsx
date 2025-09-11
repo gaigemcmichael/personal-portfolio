@@ -32,7 +32,7 @@ const skills = [
   { name: "OOP", imageUrl: "/skills/oop.webp", imageAlt: "Object-Oriented Programming (OOP)" },
   { name: "Data Structures", imageUrl: "/skills/data-structures.png", imageAlt: "Data Structures" },
   { name: "Algorithms", imageUrl: "/skills/algorithms.png", imageAlt: "Algorithms" },
-  { name: "Rest APIs", imageUrl: "/skills/rest-api.png", imageAlt: "Rest APIs" },
+  { name: "REST APIs", imageUrl: "/skills/rest-api.png", imageAlt: "Rest APIs" },
 ];
 
 export default function Skills() {
