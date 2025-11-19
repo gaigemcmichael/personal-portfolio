@@ -13,9 +13,9 @@ const projects: Project[] = [
     imageAlt: "Eviction mediation platform",
   },
   {
-    name: "Vacation Sales Site",
+    name: "Vacation Sales Website",
     descriptionShort: "Created a vacation sales website...",
-    descriptionLong: "Created a vacation sales website using React, Bootstrap, Python, SQL, and AWS to sell fictitious vacation packages. Created RESTful APIs to support the application using Python, SQL, API Gateway, AWS Lambda, AWS Relational Database Service(MySQL), and AWS Simple Notification Service.",
+    descriptionLong: "Created a vacation sales website using React, Bootstrap, Python, SQL, and AWS to sell fictitious vacation packages. Hosted the frontend using AWS Amplify and created RESTful APIs to support the application using Python, SQL, API Gateway, AWS Lambda, AWS Relational Database Service(MySQL), and AWS Simple Notification Service.",
     imageUrl: "/project-experience/vacation-sales.jpg",
     imageAlt: "Vacation sales website",
   },
