@@ -6,6 +6,20 @@ import { Project } from "../types";
 
 const projects: Project[] = [
   {
+    name: "Eviction Mediation Platform",
+    descriptionShort: "Developed a mediation platform...",
+    descriptionLong: "Developed an eviction mediation platform using Ruby on Rails in collaboration with the Franklin County Court through a specialized Ohio State capstone course called 'JusticeTech'. The project created a platform for landlords and tenants to mediate eviction cases outside of court, aiming to reduce court caseloads and provide better outcomes for both parties.",
+    imageUrl: "/project-experience/eviction-mediation.jpg",
+    imageAlt: "Eviction mediation platform",
+  },
+  {
+    name: "Vacation Sales Site",
+    descriptionShort: "Created a vacation sales website...",
+    descriptionLong: "Created a vacation sales website using React, Bootstrap, Python, SQL, and AWS to sell fictitious vacation packages. Created RESTful APIs to support the application using Python, SQL, API Gateway, AWS Lambda, AWS Relational Database Service(MySQL), and AWS Simple Notification Service.",
+    imageUrl: "/project-experience/vacation-sales.jpg",
+    imageAlt: "Vacation sales website",
+  },
+  {
     name: "Personal Portfolio Website",
     descriptionShort: "Developed a personal porfolio website...",
     descriptionLong: "Developed a personal portfolio website using Next.js, React, TypeScript, and Tailwind CSS to showcase my projects, education, and experience. Designed a responsive and modern UI with smooth animations and dark mode support.",

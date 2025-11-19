@@ -5,7 +5,7 @@ export default function EducationTimeline() {
   const educationData = [
     {
       school: "Ohio State University",
-      date: "2022 - Present",
+      date: "2022 - 2026",
       image: "/education/blockO.jpg",
       description: "Pursuing a Bachelor’s degree in Computer Science & Engineering, specializing in software engineering.",
       gpa: "3.9/4.0",

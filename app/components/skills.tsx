@@ -26,13 +26,17 @@ const skills = [
 
   // Tools & Platforms
   { name: "Git", imageUrl: "/skills/git.png", imageAlt: "Git version control" },
+  { name: "Docker", imageUrl: "/skills/docker.png", imageAlt: "Docker" },
   { name: "Linux", imageUrl: "/skills/linux.png", imageAlt: "Linux OS" },
+  { name: "Amazon Web Services", imageUrl: "/skills/aws.webp", imageAlt: "Amazon Web Services" },
 
   //Software concepts
   { name: "OOP", imageUrl: "/skills/oop.webp", imageAlt: "Object-Oriented Programming (OOP)" },
   { name: "Data Structures", imageUrl: "/skills/data-structures.png", imageAlt: "Data Structures" },
   { name: "Algorithms", imageUrl: "/skills/algorithms.png", imageAlt: "Algorithms" },
   { name: "REST APIs", imageUrl: "/skills/rest-api.png", imageAlt: "Rest APIs" },
+  { name: "Microservice Architecture", imageUrl: "/skills/microservices.png", imageAlt: "Microservice Architecture" },
+  { name: "Mobile First Design", imageUrl: "/skills/phone.png", imageAlt: "Mobile First Design" },
 ];
 
 export default function Skills() {
