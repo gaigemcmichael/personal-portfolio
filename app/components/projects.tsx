@@ -5,6 +5,13 @@ import ProjectModal from "./project-modal";
 import { Project } from "../types";
 
 const projects: Project[] = [
+    {
+    name: "Focus Timer Android App",
+    descriptionShort: "Developed a focus management app...",
+    descriptionLong: "Developed a focus management application for Android using Kotlin and XML-based layouts. The app allows users to optimize their productivity through various focus methods, capturereal-time device pickup monitoring using the accelerometer, and seamless to-do list synchronization with Google Tasks via OAuth2. Integrated data persistence using the Room library ensures a secure multi-user experience with session history and progress analytics to track long-term focus trends.",
+    imageUrl: "/project-experience/focus-timer.jpg",
+    imageAlt: "Focus Timer Android App",
+  },
   {
     name: "Eviction Mediation Platform",
     descriptionShort: "Developed a mediation platform...",

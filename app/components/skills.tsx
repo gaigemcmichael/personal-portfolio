@@ -8,6 +8,7 @@ const skills = [
   { name: "C++", imageUrl: "/skills/c++.png", imageAlt: "C++" },
   { name: "Python", imageUrl: "/skills/python.png", imageAlt: "Python" },
   { name: "SQL", imageUrl: "/skills/sql.png", imageAlt: "SQL" },
+  { name: "Kotlin", imageUrl: "/skills/kotlin.png", imageAlt: "Kotlin" },
 
   // Web Development
   { name: "HTML", imageUrl: "/skills/html.png", imageAlt: "HTML" },

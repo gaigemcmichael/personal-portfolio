@@ -22,6 +22,21 @@ export default function Experience() {
 
   const jobs: Job[] = [
     {
+      title: "Software Engineer I",
+      company: "New Millennium Building Systems",
+      date: "December 2025 - Present",
+      imageUrl: "/experience/new-mill-logo.svg",
+      imageAlt: "New Millennium Building Systems logo",
+      imageWidth: 550,
+      imageHeight: 200,
+      descriptionPoints: [
+        "Maintain and enhance core functionality of internal joist drafting software (JEDI) using C#/.NET, WPF, and SQL.",
+        "Collaborated in development of a customer facing web application using Mudblazor, C#, and CSS enabling viewing and managing of joist/decking orders.",
+      ],
+      link: "https://www.newmill.com/",
+      classes: "sm:ml-10",
+    },
+    {
       title: "Software Developer Intern",
       company: "London Computer Systems",
       date: "May 2025 - Aug 2025",
@@ -35,7 +50,7 @@ export default function Experience() {
         "Resolved 10+ bug tickets and delivered 13 API tickets for enhancements and new features.",
       ],
       link: "https://www.lcs.com/",
-      classes: "sm:ml-10",
+      classes: "",
     },
     {
       title: "Front End Development Intern",
